@@ -1,17 +1,18 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-Include the date you created this project and README file.
+This project and README file were created on 2021-03-24.
 
 ### Project Title
-Replace the Project Title
+Bike Share Statistics
 
 ### Description
-Describe what your project is about and what it does
+This project is based on a dataset of bike users from different cities. It displays various user statistics based on a chosen city.
 
 ### Files used
-Include the files used
+bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+README from https://github.com/udacity/pdsnd_github
+Bikeshare from Udacity Python Course
 
