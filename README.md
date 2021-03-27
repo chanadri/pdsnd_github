@@ -13,6 +13,7 @@ This project is based on a dataset of bike users from different cities. It displ
 bikeshare.py
 
 ### Credits
-README from https://github.com/udacity/pdsnd_github
-Bikeshare from Udacity Python Course
-
+<ul>
+<li>README from https://github.com/udacity/pdsnd_github</li>
+<li>Bikeshare from Udacity Python Course</li>
+</ul>
