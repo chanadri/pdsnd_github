@@ -65,7 +65,7 @@ def load_data(city, month, day):
     raw_df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.weekday_name
+    df['day_of_week'] = df['Start Time'].dt.strftime("%A")
     df['hour'] = df['Start Time'].dt.hour
                     
     if month != 'all':
