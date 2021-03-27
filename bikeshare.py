@@ -22,28 +22,24 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     global city, month, day
+    city, month, day = ' ', ' ', ' '
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = input('Please enter a city (chicago, new york city, washington):\n').lower()
     while city not in valid_city:
-        city = input('Please enter a valid city:\n').lower()
+        city = input('Please enter a city (chicago, new york city, washington):\n').lower()
     
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = input('Please enter a month (all, january, february, ... , june):\n').lower()
     while month not in valid_months:
         if month == "all":
             break
         else:
-            month = input('Please enter a valid month or "all" for all values:\n').lower()
-        
-            
-    
+            month = input('Please enter a month (all, january, february, ... , june) or "all" for all values:\n').lower()
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input('Please enter a day of week (all, monday, tuesday, ... sunday):\n').lower()
     while day not in valid_days:
         if day == "all":
             break
         else:
-            day = input('Please enter a valid day of week or "all" for all values:\n').lower()
+            day = input('Please enter a day of week (all, monday, tuesday, ... sunday) or "all" for all values:\n').lower()
     
     print('-'*40)
     return city, month, day
@@ -65,7 +61,7 @@ def load_data(city, month, day):
     raw_df = pd.read_csv(CITY_DATA[city])
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df['Start Time'].dt.weekday_name
+    df['day_of_week'] = df['Start Time'].dt.strftime("%A")
     df['hour'] = df['Start Time'].dt.hour
                     
     if month != 'all':
